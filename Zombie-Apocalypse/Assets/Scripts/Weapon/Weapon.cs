@@ -5,6 +5,8 @@ using UnityEngine;
 
 
 // sami-shooting mode za scope ili pistolje -> FPS Tutorial Series #06
+// odvojit specifikacije oruzja u drugu klasu
+
 public class Weapon : MonoBehaviour {
 
     private Animator anim;
@@ -26,7 +28,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField]
     private float fireRate = 0.1f;
     float fireTimer;
-
+    private int demage = 100;
     [SerializeField]
     private GameObject hitParicles;
     [SerializeField]
@@ -82,13 +84,18 @@ public class Weapon : MonoBehaviour {
 
         RaycastHit hit;
 
-        if (Physics.Raycast(shootPoint.position, shootPoint.transform.forward, out hit, range)) ;
+        if (Physics.Raycast(shootPoint.position, shootPoint.transform.forward, out hit, range)) 
         {
             GameObject hitParticelsEffect = Instantiate(hitParicles, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-            GameObject bulletHole = Instantiate(bulletImpact, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
+            //GameObject bulletHole = Instantiate(bulletImpact, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
 
+            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDemage(demage);
+            }
             Destroy(hitParticelsEffect, 1f);
-            Destroy(bulletHole, 2f);
+            //Destroy(bulletHole, 2f);
 
         }
         anim.CrossFadeInFixedTime("Fire",0.05f);
