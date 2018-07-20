@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour {
     private void Death()
     {
         isDead = true;
-        anim.SetTrigger("isDeing");
+        anim.SetTrigger("isDying");
         nav.enabled = false;
         rb.isKinematic = true;
         Destroy(gameObject, 4f);
