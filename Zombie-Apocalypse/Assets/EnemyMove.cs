@@ -18,6 +18,7 @@ public class EnemyMove : MonoBehaviour {
     private Animator anim;
     public Transform zombiePosition;
     public Vector3 lastPosition;
+    private EnemyHealth health;
 
 
     private void Awake()
@@ -26,6 +27,7 @@ public class EnemyMove : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = gameObject.GetComponent<Animator>();
         zombiePosition = gameObject.GetComponent<Transform>();
+        health = gameObject.GetComponent<EnemyHealth>();
         lastPosition = new Vector3();
         seePlayer = false;
 
@@ -37,14 +39,14 @@ public class EnemyMove : MonoBehaviour {
         InvokeRepeating("CheckMovmend", 0, 1.0f);
         timer += Time.deltaTime;
 
-        if (timer >= newTarger && seePlayer == false)
+        if (timer >= newTarger && seePlayer == false && !health.isDead)
         {
             
             NewTarget();
             
             timer = 0;
         }
-        else if (seePlayer)
+        else if (seePlayer && !health.isDead)
         {
             MoveToPlayer();
            

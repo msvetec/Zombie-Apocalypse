@@ -44,6 +44,7 @@ public class EnemyHealth : MonoBehaviour {
         nav.enabled = false;
         rb.isKinematic = true;
         Destroy(gameObject, 4f);
+        nav.enabled = false;
 
 
     }

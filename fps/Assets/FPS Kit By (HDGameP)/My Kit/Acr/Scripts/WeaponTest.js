@@ -7,25 +7,25 @@ private var drawWeapon : boolean = false;
 private var reloading : boolean = false;
  
 function Start (){
-DrawWeapon();
+//DrawWeapon();
 }
  
 function Update (){
  
     if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false){
-        Fire();
+       // Fire();
         }
        
         if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false){
-    Reloading();
+   // Reloading();
         }
        
         if (Input.GetKeyDown ("1") && reloading == false){
-        DrawWeapon();
+        //DrawWeapon();
         }      
 }
  
-function Fire(){
+/*function Fire(){
     animationGO.animation.CrossFadeQueued(fireLeftAnim, 0.08, QueueMode.PlayNow);
 }
  
@@ -47,4 +47,4 @@ function Reloading(){
         reloading = true;
         yield WaitForSeconds(2.0);
         reloading = false;
-}
+}*/
