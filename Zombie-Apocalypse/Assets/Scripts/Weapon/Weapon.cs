@@ -53,6 +53,8 @@ public class Weapon : MonoBehaviour
     public GameObject inventory;
     private InventoryUI invUi;
 
+    public bool isActive;
+
 
     private void Awake()
     {
@@ -67,6 +69,7 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
+       
         if (invUi.isInventory)
             return;
         if (Input.GetButton("Fire1"))

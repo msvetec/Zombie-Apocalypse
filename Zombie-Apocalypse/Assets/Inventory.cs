@@ -27,9 +27,13 @@ public class Inventory : MonoBehaviour {
         if (items.Count >= space)
         {
             Debug.Log("torba je puna");
+           
             return false;
         }
-           
+        if (_item.name == "kalas")
+        {
+            //
+        }
         items.Add(_item);
         if(onItemChangedCallBack != null)
         onItemChangedCallBack.Invoke();

@@ -3,9 +3,12 @@
 public class WeaponSwitchings : MonoBehaviour {
 
     public int selectedWeapon = 0;
+    public GameObject weapon;
+    private Weapon inInventory;
 
     private void Start()
     {
+        inInventory = weapon.GetComponent<Weapon>();
         SelectedWeapon();
     }
     private void Update()
@@ -22,7 +25,7 @@ public class WeaponSwitchings : MonoBehaviour {
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-            if (selectedWeapon <= 0)
+            if (selectedWeapon <= 0 )
                 selectedWeapon = transform.childCount - 1;
             else
                 selectedWeapon--;
@@ -35,7 +38,7 @@ public class WeaponSwitchings : MonoBehaviour {
         int i = 0;
         foreach (Transform weapon in transform)
         {
-            if (i == selectedWeapon)
+            if (i == selectedWeapon )
             {
                 weapon.gameObject.SetActive(true);
             }

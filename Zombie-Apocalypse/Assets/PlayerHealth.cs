@@ -9,12 +9,12 @@ public class PlayerHealth : MonoBehaviour {
     private int startingHealth = 100;
    // public int currentHealth;
     private bool isDemage = false;
-    [SerializeField]
-    private Slider healthSlider;
+    
+    public Slider healthSlider;
     [SerializeField]
     private int healthFallRate = 10;
-    [SerializeField]
-    private Slider hungerSlider;
+    
+    public Slider hungerSlider;
     [SerializeField]
     private int hungerFallRate = 10;
     [SerializeField]

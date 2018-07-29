@@ -10,5 +10,13 @@ public class Item : ScriptableObject {
     public virtual void Use()
     {
         Debug.Log("nest se dogodilo!");
+
+        
+            
+        
+    }
+    public void RemoveFromInventor()
+    {
+        Inventory.instance.Remove(this);
     }
 }
