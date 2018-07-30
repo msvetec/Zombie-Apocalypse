@@ -17,8 +17,8 @@ public class Weapon : MonoBehaviour
     
     [SerializeField]
     private float range;
-    [SerializeField]
-    private int bulletPerMag; //bullets per each magazine
+    
+    public int bulletPerMag; //bullets per each magazine
     [SerializeField]
     private float fireRate;
     [SerializeField]
@@ -26,8 +26,8 @@ public class Weapon : MonoBehaviour
 
  
 
-    [SerializeField]
-    private int bulletLeft = 200; // Total bullets we have
+    
+    public int bulletLeft; // Total bullets we have
     [SerializeField]
     private int currentBullets; //The current bullets in our magazine
     [SerializeField]
@@ -51,27 +51,27 @@ public class Weapon : MonoBehaviour
     private float spreadFactor = 0.1f;
 
     public GameObject inventory;
-    private InventoryUI invUi;
+    
 
     public bool isActive;
 
 
     private void Awake()
     {
-        
+        bulletLeft = 0;
         anim = GetComponent<Animator>();
         
         audioSource = GetComponent<AudioSource>();
-        invUi = inventory.GetComponent<InventoryUI>();
+       
         currentBullets = bulletPerMag;
 
     }
 
     private void Update()
     {
+
+        
        
-        if (invUi.isInventory)
-            return;
         if (Input.GetButton("Fire1"))
         {
             if (currentBullets > 0)
