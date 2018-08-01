@@ -1,14 +1,13 @@
-﻿#AUTOMOBIL#
-
-#Zvukovi#
--popraviti zvukove relodanja
--dodati zvukove pica i hrane 
--dodati zvukove uzimanja pomoci
--zvukovi zombia: zvuk napada i defolti
+﻿
 
 
 #Animacije#
 -dodavanje animacije hrane i pica i medicine (ista, staviti prazunu animaciju bez oruzja i neka traje nekoliko sekundi)
+
+#Zvukovi#
+-dodati zvukove pica i hrane 
+-dodati zvukove uzimanja pomoci
+-zvukovi zombia: zvuk napada i defolti
 
 #UI#
 -dodavanje UI kod porektanja igre
