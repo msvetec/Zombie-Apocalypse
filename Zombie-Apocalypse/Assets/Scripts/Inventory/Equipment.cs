@@ -29,6 +29,6 @@ public class Equipment : Item {
 
 }
 
-public enum EquipmentSlots { Med, EnergyDrink, Bullets, M4, Scar, Deagle, AK, G36C }
+public enum EquipmentSlots { Med, EnergyDrink, Bullets, DeagleBullets, Pepsi, Zavoji,Banana, AkScar,B556 }
 	
 

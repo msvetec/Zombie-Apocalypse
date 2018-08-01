@@ -1,0 +1,35 @@
+﻿
+#INVENTROY#
+-napraviti item drop
+
+#UI states#
+-prikazati koliko metaka imamo uz selektiranu pusku
+#AUTOMOBIL#
+
+#Weapon Model#
+-zamjeniti trenutni model deagle sa "pravim"
+-zamjeniti deagle jer kod switchanja se javlja pogreska u animaciji -> nestane pol pistolja
+-dodati hladno ozurje koje ce biti layermask PistoljHladno
+-Podesiti bolje flare effect
+-usporiti efekt switchanja oruzja
+
+#Zvukovi#
+-popraviti zvukove relodanja
+-dodati zvukove pica i hrane 
+-dodati zvuk switchanja oruzja
+-dodati zvukove uzimanja pomoci
+-zvukovi zombia: zvuk napada i defolti
+
+
+#Animacije#
+-dodavanje animacije hrane i pica i medicine (ista, staviti prazunu animaciju bez oruzja i neka traje nekoliko sekundi)
+
+#UI#
+-dodavanje UI kod porektanja igre
+-promjena kontroli upravljanja igraca
+-spremanje stanja igre
+-sucelje kod pauziranja sa opcijama spremi i izlazi iz igre
+
+#Izrada terena#
+
+#Ispravljanje bugova i brisanje nepotrebnog coda#

@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponIndex : MonoBehaviour {
 
@@ -8,7 +9,15 @@ public class WeaponIndex : MonoBehaviour {
     public GameObject wManager;
     private WeaponManager wm;
     public bool isTaked;
+
     public int takeBullets;
+    public string weaponName;
+
+    
+    public Sprite weaponImage;
+
+
+
 
     private void Awake()
     {
@@ -23,10 +32,11 @@ public class WeaponIndex : MonoBehaviour {
     {
         if (isTaked)
         {
-            gameObject.SetActive(false);
+            
+            this.gameObject.SetActive(false);
 
         }
-
+      
     }
 
 
@@ -35,6 +45,9 @@ public class WeaponIndex : MonoBehaviour {
         if (other.gameObject == player)
         {
             wm.canTake = true;
+            
+            
+
         }
         
     }private void OnTriggerExit(Collider other)
@@ -42,6 +55,7 @@ public class WeaponIndex : MonoBehaviour {
         if (other.gameObject == player)
         {
             wm.canTake = false;
+           
         }
     }
 

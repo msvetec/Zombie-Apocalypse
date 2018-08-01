@@ -9,6 +9,11 @@ public class InventoryUI : MonoBehaviour {
     private bool klick = true;
     public GameObject inventoryUI;
     public bool isInventory = false;
+    public GameObject player;
+    
+    
+    private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
+   
    
 
 
@@ -17,31 +22,40 @@ public class InventoryUI : MonoBehaviour {
         inventory = Inventory.instance;
         inventory.onItemChangedCallBack += UpdateUI;
         slots = itemsPerent.GetComponentsInChildren<InventorySlot>();
+       
+        firstPersonController = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
         
+
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            //inventoryUI.SetActive(!inventoryUI.activeSelf);
+           
             klick = !klick;
-
-
-
 
             if (klick)
             {
                 inventoryUI.SetActive(true);
+                
+                firstPersonController.enabled = false;
+                Inventory.instance.inventoryOn = true;
+                Cursor.lockState = CursorLockMode.None;
+                //Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 isInventory = true;
+                
+                
             }
             else
             {
                 inventoryUI.SetActive(false);
                 Cursor.visible = false;
                 isInventory = false;
-                
+                firstPersonController.enabled = true;
+                Inventory.instance.inventoryOn = false;
+
             }
         }
     }

@@ -71,16 +71,19 @@ public class Weapon : MonoBehaviour
     {
 
         
-       
+
+
         if (Input.GetButton("Fire1"))
         {
-            if (currentBullets > 0)
+            if (currentBullets > 0 && !Inventory.instance.inventoryOn)
                 Fire();
             else if (bulletLeft > 0)
                 DoReload();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
+            BulletsSet();
+            
             if (currentBullets < bulletPerMag && bulletLeft > 0)
                 DoReload();
         }
@@ -132,13 +135,19 @@ public class Weapon : MonoBehaviour
     }
     public void Reload()
     {
+        
         if (bulletLeft <= 0) return;
 
         int bulletsToLoad = bulletPerMag - currentBullets;
         int bulletsToDeduct = (bulletLeft >= bulletsToLoad) ? bulletsToLoad : bulletLeft;
 
         bulletLeft -= bulletsToDeduct;
+        BulletsALLControll(bulletsToDeduct);
         currentBullets += bulletsToDeduct;
+        Debug.Log("ajde vise u pm");
+       
+
+
     }
     private void DoReload()
     {
@@ -147,8 +156,6 @@ public class Weapon : MonoBehaviour
 
         PlayReloadSound();
         anim.CrossFadeInFixedTime("reload", 0.01f);
-
-
     }
 
     private void PlayShootSound()
@@ -160,6 +167,36 @@ public class Weapon : MonoBehaviour
     {
         audioSource.PlayOneShot(reloadSound);
 
+    }
+    private void BulletsSet()
+    {
+        if (BulletsController.instance.activeWeapon == 1 || BulletsController.instance.activeWeapon == 2)
+        {
+            bulletLeft = BulletsController.instance.akScar;
+        }
+        if (BulletsController.instance.activeWeapon == 3 || BulletsController.instance.activeWeapon == 5)
+        {
+            bulletLeft = BulletsController.instance.b556;
+        }
+        if (BulletsController.instance.activePistole == 4)
+        {
+            bulletLeft = BulletsController.instance.deagleBullets;
+        }
+    }
+    private void BulletsALLControll( int _bulletsToDeduct)
+    {
+        if ((BulletsController.instance.activeWeapon == 1 || BulletsController.instance.activeWeapon == 2) && BulletsController.instance.slot1)
+        {
+            BulletsController.instance.akScar -= _bulletsToDeduct;
+        }
+        if ((BulletsController.instance.activeWeapon == 3 || BulletsController.instance.activeWeapon == 5)&& BulletsController.instance.slot1)
+        {
+            BulletsController.instance.b556 -= _bulletsToDeduct;
+        }
+        if (BulletsController.instance.activePistole == 4 && BulletsController.instance.slot2)
+        {
+            BulletsController.instance.deagleBullets -= _bulletsToDeduct;
+        }
     }
    
 

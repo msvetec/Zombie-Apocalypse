@@ -31,15 +31,15 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4995400016465272
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014666185525686}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.89, y: 3.128, z: 3.399}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -30.02, y: 0.3959, z: 1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65640593583220696
 BoxCollider:
@@ -130,6 +130,8 @@ MonoBehaviour:
   wManager: {fileID: 0}
   isTaked: 0
   takeBullets: 0
+  weaponName: AK-47
+  weaponImage: {fileID: 21300000, guid: 562873a910322b545a24de474a75376a, type: 3}
 --- !u!135 &135013815840125896
 SphereCollider:
   m_ObjectHideFlags: 1

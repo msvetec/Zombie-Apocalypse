@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
 
     public static Inventory instance;
     public int space = 5;
+    public bool inventoryOn;
     
-
+    public bool torbaPuna = false;
+    
     private void Awake()
     {
+        
         if (instance != null)
         {
             Debug.Log("pronadeno vise on jedne istance");
@@ -21,20 +25,32 @@ public class Inventory : MonoBehaviour {
     public OnItemChanged onItemChangedCallBack;
 
     public List<Item> items = new List<Item>();
-
-    public bool Add(Item _item)
+    private void Update()
     {
         if (items.Count >= space)
         {
-            Debug.Log("torba je puna");
-           
+
+            torbaPuna = true;
+        }
+        else
+            torbaPuna = false;
+
+    }
+    public bool Add(Item _item)
+    {
+        
+
+        if (items.Count >= space)
+        { 
+      
             return false;
         }
-       
+  
         items.Add(_item);
-        if(onItemChangedCallBack != null)
-        onItemChangedCallBack.Invoke();
+        if (onItemChangedCallBack != null)
+            onItemChangedCallBack.Invoke();
         return true;
+       
     }
 
     public void Remove(Item _item)
@@ -44,4 +60,5 @@ public class Inventory : MonoBehaviour {
             onItemChangedCallBack.Invoke();
     }
     
+
 }

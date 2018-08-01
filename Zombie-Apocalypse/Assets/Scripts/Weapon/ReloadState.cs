@@ -6,6 +6,8 @@ public class ReloadState : StateMachineBehaviour {
     [SerializeField]
     private float reloadTime = 0.7f;
     private bool hasReloaded = false;
+   // public GameObject player;
+    //private WeaponManager wm;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -18,8 +20,20 @@ public class ReloadState : StateMachineBehaviour {
 
         if (hasReloaded) return;
 
+       // wm = player.GetComponent<WeaponManager>();
+        //Animator anim;
+        /*int index;
+        if (BulletsController.instance.activeWeapon == 2)
+        {
+            index = 1;
+        }*/
+        
+
         if (stateInfo.normalizedTime >= reloadTime)
         {
+
+            //anim = wm.weaponsInUse[1].GetComponent<Animator>();
+            //anim.GetComponent<Weapon>().Reload();
             animator.GetComponent<Weapon>().Reload();
             hasReloaded = true;
         }

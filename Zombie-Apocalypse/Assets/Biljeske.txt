@@ -1,0 +1,7 @@
+﻿
+popraviti iteampickup UI
+dodati samo jedan klik jedan shot za pistolj
+
+
+
+
