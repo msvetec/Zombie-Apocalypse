@@ -16,7 +16,7 @@ public class WeaponSway : MonoBehaviour {
     private void Start()
     {
         initialPosition = transform.localPosition;
-
+       
     }
 
     private void Update()

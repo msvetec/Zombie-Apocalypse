@@ -134,21 +134,22 @@ public class WeaponManager : MonoBehaviour {
                 weaponsInUse[0].SetActive(false);
                 if (weaponsInUse[0] != weaponInGame[0])
                 {
-                    DropWeapon(weaponToDrop);
+                    DropWeapon(pistoleToDrop);
                     pre.isTaked = false;
                 }
                 weaponsInUse[0] = weaponInGame[pIndex];
                 weaponsInUse[0].SetActive(true);
                 weaponsInUse[1].SetActive(false);
-                
-                Weapon weapon = weaponsInUse[1].transform.GetComponent<Weapon>();
-                if (pIndex == 4)
+                pre.isTaked = true;
+                Weapon weapon = weaponsInUse[0].transform.GetComponent<Weapon>();
+                pistoleToDrop = weaponsInUse[0].transform.GetComponent<WeaponIndex>().setWeapon;
+                if (pIndex == 4 )
                 {
                     weapon.bulletLeft = BulletsController.instance.deagleBullets;
                 }
-                pistoleToDrop = weaponsInUse[0].transform.GetComponent<WeaponIndex>().setWeapon;
+                
                 BulletsController.instance.activePistole = pistoleToDrop;
-                pre.isTaked = true;
+                
             }
             else
             {

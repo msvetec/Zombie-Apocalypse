@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 
 // sami-shooting mode za scope ili pistolje -> FPS Tutorial Series #06
@@ -24,18 +24,12 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private int demage;
 
- 
-
-    
     public int bulletLeft; // Total bullets we have
     [SerializeField]
     private int currentBullets; //The current bullets in our magazine
     [SerializeField]
     private Transform shootPoint;
    
-    
-
-    
 
     private float fireTimer;
     [SerializeField]
@@ -44,13 +38,16 @@ public class Weapon : MonoBehaviour
     private AudioClip shootSound;
     [SerializeField]
     private AudioClip reloadSound;
+    public AudioClip drawSound;
 
     private bool isReloding;
+    private bool isDrawWeapon;
 
     [SerializeField]
     private float spreadFactor = 0.1f;
 
     public GameObject inventory;
+    public Text ammoText; 
     
 
     public bool isActive;
@@ -58,21 +55,25 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        bulletLeft = 0;
+        //bulletLeft = 0;
         anim = GetComponent<Animator>();
         
         audioSource = GetComponent<AudioSource>();
        
         currentBullets = bulletPerMag;
+        DoDraw();
+        ShowAmmo();
 
+    }
+    private void OnEnable()
+    {
+        DoDraw();
     }
 
     private void Update()
     {
-
-        
-
-
+        BulletsSet();
+        ShowAmmo();
         if (Input.GetButton("Fire1"))
         {
             if (currentBullets > 0 && !Inventory.instance.inventoryOn)
@@ -82,7 +83,7 @@ public class Weapon : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            BulletsSet();
+            
             
             if (currentBullets < bulletPerMag && bulletLeft > 0)
                 DoReload();
@@ -97,6 +98,8 @@ public class Weapon : MonoBehaviour
     {
         AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
         isReloding = info.IsName("reload");
+        AnimatorStateInfo inf = anim.GetCurrentAnimatorStateInfo(0);
+        isDrawWeapon = inf.IsName("draw");
 
 
     }
@@ -131,6 +134,7 @@ public class Weapon : MonoBehaviour
         muzzleFlash.Play();
         PlayShootSound();
         currentBullets--;
+        ShowAmmo();
         fireTimer = 0.0f;
     }
     public void Reload()
@@ -144,8 +148,9 @@ public class Weapon : MonoBehaviour
         bulletLeft -= bulletsToDeduct;
         BulletsALLControll(bulletsToDeduct);
         currentBullets += bulletsToDeduct;
-        Debug.Log("ajde vise u pm");
-       
+        ShowAmmo();
+
+
 
 
     }
@@ -157,6 +162,15 @@ public class Weapon : MonoBehaviour
         PlayReloadSound();
         anim.CrossFadeInFixedTime("reload", 0.01f);
     }
+    private void DoDraw()
+    {
+        AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
+        if (isDrawWeapon) return;
+        PlayDrawSound();
+        anim.CrossFadeInFixedTime("draw", 0.01F);
+        
+    }
+    
 
     private void PlayShootSound()
     {
@@ -170,15 +184,15 @@ public class Weapon : MonoBehaviour
     }
     private void BulletsSet()
     {
-        if (BulletsController.instance.activeWeapon == 1 || BulletsController.instance.activeWeapon == 2)
+        if ((BulletsController.instance.activeWeapon == 1 || BulletsController.instance.activeWeapon == 2)&& BulletsController.instance.slot1)
         {
             bulletLeft = BulletsController.instance.akScar;
         }
-        if (BulletsController.instance.activeWeapon == 3 || BulletsController.instance.activeWeapon == 5)
+        if ((BulletsController.instance.activeWeapon == 3 || BulletsController.instance.activeWeapon == 5)&& BulletsController.instance.slot1)
         {
             bulletLeft = BulletsController.instance.b556;
         }
-        if (BulletsController.instance.activePistole == 4)
+        if (BulletsController.instance.activePistole == 4 && BulletsController.instance.slot2 )
         {
             bulletLeft = BulletsController.instance.deagleBullets;
         }
@@ -197,6 +211,14 @@ public class Weapon : MonoBehaviour
         {
             BulletsController.instance.deagleBullets -= _bulletsToDeduct;
         }
+    }
+    private void ShowAmmo()
+    {
+        ammoText.text = currentBullets.ToString() + " / " + bulletLeft.ToString();
+    }
+    private void PlayDrawSound()
+    {
+        audioSource.PlayOneShot(drawSound);
     }
    
 

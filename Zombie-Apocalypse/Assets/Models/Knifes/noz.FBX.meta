@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 9b1d4e46bd178ac48bcedfc9f3b5f6dd
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: DirectConnectNode_8
+    100002: DirectConnectNode_8-DC_Shell
+    100004: DirectConnectNode_8-DC_Shell 1
+    100006: DirectConnectNode_8-DC_Shell 2
+    100008: DirectConnectNode_8-DC_Shell 3
+    100010: DirectConnectNode_8-DC_Shell 4
+    100012: DirectConnectNode_8-DC_Shell 5
+    100014: DirectConnectNode_8-DC_Shell 6
+    100016: IGES Model Data
+    100018: //RootNode
+    100020: Noz 1
+    400000: DirectConnectNode_8
+    400002: DirectConnectNode_8-DC_Shell
+    400004: DirectConnectNode_8-DC_Shell 1
+    400006: DirectConnectNode_8-DC_Shell 2
+    400008: DirectConnectNode_8-DC_Shell 3
+    400010: DirectConnectNode_8-DC_Shell 4
+    400012: DirectConnectNode_8-DC_Shell 5
+    400014: DirectConnectNode_8-DC_Shell 6
+    400016: IGES Model Data
+    400018: //RootNode
+    400020: Noz 1
+    2100000: 01 - Default
+    2100002: 02 - Default
+    2100004: No Name
+    2300000: DirectConnectNode_8-DC_Shell
+    2300002: DirectConnectNode_8-DC_Shell 1
+    2300004: DirectConnectNode_8-DC_Shell 2
+    2300006: DirectConnectNode_8-DC_Shell 3
+    2300008: DirectConnectNode_8-DC_Shell 4
+    2300010: DirectConnectNode_8-DC_Shell 5
+    2300012: DirectConnectNode_8-DC_Shell 6
+    3300000: DirectConnectNode_8-DC_Shell
+    3300002: DirectConnectNode_8-DC_Shell 1
+    3300004: DirectConnectNode_8-DC_Shell 2
+    3300006: DirectConnectNode_8-DC_Shell 3
+    3300008: DirectConnectNode_8-DC_Shell 4
+    3300010: DirectConnectNode_8-DC_Shell 5
+    3300012: DirectConnectNode_8-DC_Shell 6
+    4300000: DirectConnectNode_8-DC_Shell
+    4300002: DirectConnectNode_8-DC_Shell
+    4300004: DirectConnectNode_8-DC_Shell
+    4300006: DirectConnectNode_8-DC_Shell
+    4300008: DirectConnectNode_8-DC_Shell
+    4300010: DirectConnectNode_8-DC_Shell
+    4300012: DirectConnectNode_8-DC_Shell
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

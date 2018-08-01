@@ -20,20 +20,10 @@ public class ReloadState : StateMachineBehaviour {
 
         if (hasReloaded) return;
 
-       // wm = player.GetComponent<WeaponManager>();
-        //Animator anim;
-        /*int index;
-        if (BulletsController.instance.activeWeapon == 2)
-        {
-            index = 1;
-        }*/
-        
-
         if (stateInfo.normalizedTime >= reloadTime)
         {
 
-            //anim = wm.weaponsInUse[1].GetComponent<Animator>();
-            //anim.GetComponent<Weapon>().Reload();
+            
             animator.GetComponent<Weapon>().Reload();
             hasReloaded = true;
         }
