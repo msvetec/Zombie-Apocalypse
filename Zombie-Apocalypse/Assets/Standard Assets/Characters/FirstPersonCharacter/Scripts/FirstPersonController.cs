@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public bool walk;
 
         // Use this for initialization
         private void Start()
@@ -193,11 +194,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                                       (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
                 newCameraPosition = m_Camera.transform.localPosition;
                 newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
+                walk = true;
             }
             else
             {
                 newCameraPosition = m_Camera.transform.localPosition;
                 newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
+                walk = false;
             }
             m_Camera.transform.localPosition = newCameraPosition;
         }

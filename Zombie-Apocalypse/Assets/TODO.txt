@@ -1,13 +1,12 @@
 ﻿
-
-
-#Animacije#
--dodavanje animacije hrane i pica i medicine (ista, staviti prazunu animaciju bez oruzja i neka traje nekoliko sekundi)
-
 #Zvukovi#
 -dodati zvukove pica i hrane 
 -dodati zvukove uzimanja pomoci
 -zvukovi zombia: zvuk napada i defolti
+
+ #Zombie#
+ ima dva triggered collidera treba  dodati prazni objekt koji citara rotaciju zombija i zna kad gleda u nas
+ i tek onda kad je u nekom radusu napada - maknut sphere collider trigger
 
 #UI#
 -dodavanje UI kod porektanja igre
@@ -18,3 +17,4 @@
 #Izrada terena#
 
 #Ispravljanje bugova i brisanje nepotrebnog coda#
+

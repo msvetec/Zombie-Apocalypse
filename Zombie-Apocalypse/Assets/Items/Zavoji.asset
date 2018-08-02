@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Zavoj
   icon: {fileID: 21300000, guid: 1e7495b6c9692d04a9e205a8a9990cab, type: 3}
   isDefaultItem: 0
-  equipSlot: 9
+  equipSlot: 5
   medModifier: 40
   hungerModifer: 0
   bulletsModifer: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Pepsi
   icon: {fileID: 21300000, guid: 1e029091c38cce94daebc8d408f14dc9, type: 3}
   isDefaultItem: 0
-  equipSlot: 8
+  equipSlot: 4
   medModifier: 10
   hungerModifer: 20
   bulletsModifer: 0

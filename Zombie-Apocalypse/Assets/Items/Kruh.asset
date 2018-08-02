@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Kruh
   icon: {fileID: 21300000, guid: 074e201f8b51cbc42beba57a35e619bd, type: 3}
   isDefaultItem: 0
-  equipSlot: 11
+  equipSlot: 7
   medModifier: 0
   hungerModifer: 80
   bulletsModifer: 0

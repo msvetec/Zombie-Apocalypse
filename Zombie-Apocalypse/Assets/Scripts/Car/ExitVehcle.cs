@@ -11,26 +11,32 @@ public class ExitVehcle : MonoBehaviour {
     public GameObject theCar;
     public GameObject exitPlace;
     private Rigidbody rb;
+    public GameObject fuelObject;
 
 
-  
+
+
     private void Update()
     {
       if (Input.GetKeyDown(KeyCode.F))
         {
-            rb = theCar.GetComponent<Rigidbody>();
-            rb.constraints = RigidbodyConstraints.FreezePositionX;
-            theCar.transform.tag = "Untagged";
-            camera.SetActive(false);
-            player.SetActive(true);
-            player.transform.position = exitPlace.transform.position;
-            theCar.GetComponent<CarController>().enabled = false;
-            theCar.GetComponent<CarUserControl>().enabled = false;
-            theCar.GetComponent<CarAudio>().enabled = false;
-            theCar.GetComponent<AudioSource>().enabled = false;
-            exitTrigger.SetActive(false);
+            CarDeactivate();
         }
-        
+    }
+    private void CarDeactivate()
+    {
+        fuelObject.SetActive(false);
+        rb = theCar.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezePositionX;
+        theCar.transform.tag = "Untagged";
+        camera.SetActive(false);
+        player.SetActive(true);
+        player.transform.position = exitPlace.transform.position;
+        theCar.GetComponent<CarController>().enabled = false;
+        theCar.GetComponent<CarUserControl>().enabled = false;
+        theCar.GetComponent<CarAudio>().enabled = false;
+        theCar.GetComponent<AudioSource>().enabled = false;
+        exitTrigger.SetActive(false);
     }
 
 }

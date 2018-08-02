@@ -11,12 +11,12 @@ public class Equipment : Item {
     public int medModifier;
     public int hungerModifer;
     public int bulletsModifer;
-    
-    
 
 
 
-   
+
+
+
 
     public override void Use()
     {
@@ -25,10 +25,10 @@ public class Equipment : Item {
         RemoveFromInventor();
 
     }
-    
+
 
 }
 
-public enum EquipmentSlots { Med, EnergyDrink, Bullets, DeagleBullets, Pepsi, Zavoji,Banana, AkScar,B556 }
+public enum EquipmentSlots { Med, EnergyDrink, Bullets, DeagleBullets, Pepsi, Zavoji, Banana, Kruh, AkScar,B556 }
 	
 

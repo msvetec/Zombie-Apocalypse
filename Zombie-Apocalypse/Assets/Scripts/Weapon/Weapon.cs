@@ -63,6 +63,7 @@ public class Weapon : MonoBehaviour
         currentBullets = bulletPerMag;
         DoDraw();
         ShowAmmo();
+        
 
     }
     private void OnEnable()
@@ -78,14 +79,14 @@ public class Weapon : MonoBehaviour
         {
             if (currentBullets > 0 && !Inventory.instance.inventoryOn)
                 Fire();
-            else if (bulletLeft > 0)
+            else if (bulletLeft > 0 && !Inventory.instance.inventoryOn)
                 DoReload();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
             
             
-            if (currentBullets < bulletPerMag && bulletLeft > 0)
+            if (currentBullets < bulletPerMag && bulletLeft > 0 && !Inventory.instance.inventoryOn)
                 DoReload();
         }
         if (fireTimer < fireRate)

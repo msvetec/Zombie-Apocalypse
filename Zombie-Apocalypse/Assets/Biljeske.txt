@@ -1,6 +1,12 @@
 ﻿
-popraviti iteampickup UI
+popraviti iteampickup UI, tj dodati neki GUI text umjesto da se pokrece text UI item i pise u njega
+koristiti isto kao kod ispisivanja stanja metaka.
 dodati samo jedan klik jedan shot za pistolj
+
+
+animacije healanja i hrane
+-bug- item se obrise iako ga nismo iskoristili ako se pomaknemo
+
 
 
 

@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174c91c41e1b9af48afcf8caaf348a5f, type: 3}
   m_Name: b556
   m_EditorClassIdentifier: 
-  name: 5.56 Bullets
+  name: Bullets556
   icon: {fileID: 21300000, guid: 686cc9d669f44ef46a24f266bb828aea, type: 3}
   isDefaultItem: 0
-  equipSlot: 8
+  equipSlot: 9
   medModifier: 0
   hungerModifer: 0
   bulletsModifer: 30

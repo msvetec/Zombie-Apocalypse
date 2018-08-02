@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174c91c41e1b9af48afcf8caaf348a5f, type: 3}
   m_Name: 762
   m_EditorClassIdentifier: 
-  name: 7.62 Bullets
+  name: Bullets762
   icon: {fileID: 21300000, guid: 901a13948e66d254c9fe2b778f820051, type: 3}
   isDefaultItem: 0
-  equipSlot: 7
+  equipSlot: 8
   medModifier: 0
   hungerModifer: 0
   bulletsModifer: 30

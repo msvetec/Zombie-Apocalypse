@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Banana
   icon: {fileID: 21300000, guid: ae8deacdcd3ad734a90fd8a8ea01bcb9, type: 3}
   isDefaultItem: 0
-  equipSlot: 10
+  equipSlot: 6
   medModifier: 0
   hungerModifer: 35
   bulletsModifer: 0
