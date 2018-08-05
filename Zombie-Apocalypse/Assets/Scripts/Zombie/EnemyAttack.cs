@@ -42,26 +42,19 @@ public class EnemyAttack : MonoBehaviour {
     private void Attack()
     {
         timer = 0f;
-        if (Vector3.Distance(player.position, this.transform.position) < 2)
+        if (Vector3.Distance(player.position, this.transform.position) < 1.5f)
         {
             nav.speed = 0.5f;
             //nav.Stop();
             anim.speed = 1f;
             anim.SetBool("isWalking", false);
-    
-            {
-                anim.SetBool("isAttacking", true);
-                playerHealth.TakeDemage(attackDemage);
-            }
-
-
+            anim.SetBool("isAttacking", true);
+            playerHealth.TakeDemage(attackDemage);
+          
         }
         else
         {
-            //nav.speed = 1f;
-            //anim.speed = 1f;
             anim.SetBool("isWalking", true);
-            
             anim.SetBool("isAttacking", false);
             
         }

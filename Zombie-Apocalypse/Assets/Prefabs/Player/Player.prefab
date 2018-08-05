@@ -11522,7 +11522,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565979407222942}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
@@ -11855,6 +11855,7 @@ MonoBehaviour:
   spreadFactor: 0.1
   inventory: {fileID: 0}
   ammoText: {fileID: 0}
+  pistole: 0
   isActive: 0
 --- !u!114 &114200132157565082
 MonoBehaviour:
@@ -11883,6 +11884,7 @@ MonoBehaviour:
   spreadFactor: 0.1
   inventory: {fileID: 0}
   ammoText: {fileID: 0}
+  pistole: 1
   isActive: 0
 --- !u!114 &114276284505764692
 MonoBehaviour:
@@ -11901,6 +11903,7 @@ MonoBehaviour:
   hungerSlider: {fileID: 0}
   hungerFallRate: 10
   maxHunger: 100
+  hurtSound: {fileID: 8300000, guid: 62bdfae42e815f94b87038aa2bffd438, type: 3}
 --- !u!114 &114316669311273548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11928,6 +11931,7 @@ MonoBehaviour:
   spreadFactor: 0.1
   inventory: {fileID: 0}
   ammoText: {fileID: 0}
+  pistole: 0
   isActive: 0
 --- !u!114 &114360999062510252
 MonoBehaviour:
@@ -11988,6 +11992,7 @@ MonoBehaviour:
   spreadFactor: 0.1
   inventory: {fileID: 0}
   ammoText: {fileID: 0}
+  pistole: 0
   isActive: 0
 --- !u!114 &114556075477763854
 MonoBehaviour:
@@ -12016,6 +12021,7 @@ MonoBehaviour:
   spreadFactor: 0.1
   inventory: {fileID: 0}
   ammoText: {fileID: 0}
+  pistole: 0
   isActive: 0
 --- !u!114 &114566473377199258
 MonoBehaviour:
@@ -12241,6 +12247,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  walk: 0
 --- !u!114 &114930997464951686
 MonoBehaviour:
   m_ObjectHideFlags: 1

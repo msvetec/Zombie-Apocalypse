@@ -10,32 +10,38 @@ public class EnemyMove : MonoBehaviour {
     public float speed;
     private NavMeshAgent nav;
     public Vector3 target;
-
     private GameObject player;
     private bool seePlayer;
     public Transform playerPosition;
-
     private Animator anim;
     public Transform zombiePosition;
     public Vector3 lastPosition;
     private EnemyHealth health;
+    private Transform playerPostion;
+
+    public AudioClip[] zombieSounds;
+    private AudioSource audioSource;
+   
 
 
     private void Awake()
     {
         nav = gameObject.GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = PlayerManager.instance.player;
         anim = gameObject.GetComponent<Animator>();
         zombiePosition = gameObject.GetComponent<Transform>();
         health = gameObject.GetComponent<EnemyHealth>();
         lastPosition = new Vector3();
         seePlayer = false;
+       
+        playerPosition = player.transform;
+        audioSource = player.GetComponent<AudioSource>();
 
     }
 
     private void Update()
     {
-
+        float distance = Vector3.Distance(playerPosition.position, transform.position);
         InvokeRepeating("CheckMovmend", 0, 1.0f);
         timer += Time.deltaTime;
 
@@ -49,8 +55,14 @@ public class EnemyMove : MonoBehaviour {
         else if (seePlayer && !health.isDead)
         {
             MoveToPlayer();
-           
+            FacePlayer();
+
         }
+        if (health.isDead)
+        {
+            audioSource.Stop();
+        }
+       
     }
 
     private void NewTarget()
@@ -74,7 +86,9 @@ public class EnemyMove : MonoBehaviour {
         nav.speed = 5;
         anim.speed = 2; 
         nav.SetDestination(playerPosition.position);
-       
+        
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -82,7 +96,8 @@ public class EnemyMove : MonoBehaviour {
         if (other.gameObject == player)
         {
             seePlayer = true;
-            
+            PlaySound();
+
         }
     }
     private void OnTriggerExit(Collider other)
@@ -108,6 +123,18 @@ public class EnemyMove : MonoBehaviour {
             anim.SetBool("isWalking", false);
         }
     }
+    private void FacePlayer()
+    {
+        Vector3 direction = (playerPosition.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime );
+    }
+    private void PlaySound()
+    {
+        int randomClips = Random.Range(0, zombieSounds.Length);
+        audioSource.PlayOneShot(zombieSounds[randomClips]);
+    }
+   
    
 
 

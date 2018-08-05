@@ -18,6 +18,11 @@ public class EquipmentManager : MonoBehaviour {
     private bool done;
     private bool klik;
     public bool canDelete;
+    private AudioSource audioSource;
+    public AudioClip drinks;
+    public AudioClip eat;
+    public AudioClip med;
+
 
     public float timer;
 
@@ -66,6 +71,7 @@ public class EquipmentManager : MonoBehaviour {
     private void Start()
     {
         playerHealth = player.GetComponent<PlayerHealth>();
+        audioSource = player.GetComponent<AudioSource>();
         useStartValue = 0;
         useMaxValue = 100;
         useSlider.value = useStartValue;
@@ -86,6 +92,7 @@ public class EquipmentManager : MonoBehaviour {
             newItem = _newItem;
             
             klik = true;
+            PlaySound(drinks);
            
 
         }
@@ -95,16 +102,17 @@ public class EquipmentManager : MonoBehaviour {
             newItem = _newItem;
             useChangeRateValue = 1;
             klik = true;
+            PlaySound(drinks);
 
-            
+
         }
         if (_newItem.equipSlot == EquipmentSlots.Med)
         {
             // item = 2;
             useChangeRateValue = 0.1f;
             newItem = _newItem;
-           
             klik = true;
+            PlaySound(med);
             
         }
         if (_newItem.equipSlot == EquipmentSlots.Zavoji)
@@ -112,9 +120,8 @@ public class EquipmentManager : MonoBehaviour {
             //item = 3;
             useChangeRateValue = 0.2f;
             newItem = _newItem;
-           
             klik = true;
-            
+            PlaySound(med);
         }
         if (_newItem.equipSlot == EquipmentSlots.Banana)
         {
@@ -122,7 +129,8 @@ public class EquipmentManager : MonoBehaviour {
             newItem = _newItem;
             useChangeRateValue = 1f;
             klik = true;
-            
+            PlaySound(eat);
+
         }
         if (_newItem.equipSlot == EquipmentSlots.Kruh)
         {
@@ -130,6 +138,7 @@ public class EquipmentManager : MonoBehaviour {
             newItem = _newItem;
             useChangeRateValue = 0.2f;
             klik = true;
+            PlaySound(eat);
         }
         //bullets
         if (_newItem.equipSlot == EquipmentSlots.AkScar)
@@ -159,6 +168,11 @@ public class EquipmentManager : MonoBehaviour {
        playerHealth.hungerSlider.value += _newItem.hungerModifer;
        playerHealth.healthSlider.value += _newItem.medModifier;
       
+    }
+    private void PlaySound(AudioClip _sound)
+    {
+        audioSource.PlayOneShot(_sound);
+     
     }
   
 }

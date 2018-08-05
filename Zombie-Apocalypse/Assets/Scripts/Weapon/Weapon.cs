@@ -47,8 +47,9 @@ public class Weapon : MonoBehaviour
     private float spreadFactor = 0.1f;
 
     public GameObject inventory;
-    public Text ammoText; 
-    
+    public Text ammoText;
+    public bool pistole;
+    private bool shootInput;
 
     public bool isActive;
 
@@ -63,7 +64,9 @@ public class Weapon : MonoBehaviour
         currentBullets = bulletPerMag;
         DoDraw();
         ShowAmmo();
-        
+        //TypeOfWeapon();
+
+
 
     }
     private void OnEnable()
@@ -75,7 +78,8 @@ public class Weapon : MonoBehaviour
     {
         BulletsSet();
         ShowAmmo();
-        if (Input.GetButton("Fire1"))
+        TypeOfWeapon();
+        if (shootInput)
         {
             if (currentBullets > 0 && !Inventory.instance.inventoryOn)
                 Fire();
@@ -220,6 +224,19 @@ public class Weapon : MonoBehaviour
     private void PlayDrawSound()
     {
         audioSource.PlayOneShot(drawSound);
+    }
+    private void TypeOfWeapon()
+    {
+        if (pistole)
+        {
+            shootInput = Input.GetButtonDown("Fire1");
+        }
+        else
+        {
+            shootInput = Input.GetButton("Fire1");
+        }
+
+         
     }
    
 

@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour {
     private int hungerFallRate = 10;
     [SerializeField]
     private int maxHunger = 100;
+    public AudioClip hurtSound;
+    private AudioSource audioSource;
     
 
     private bool isDeath = false;
@@ -30,6 +32,7 @@ public class PlayerHealth : MonoBehaviour {
         healthSlider.value = startingHealth;
         hungerSlider.maxValue = maxHunger;
         hungerSlider.value = maxHunger;
+        audioSource = transform.GetComponent<AudioSource>();
         
 
 
@@ -49,9 +52,12 @@ public class PlayerHealth : MonoBehaviour {
     {
         isDemage = true;//najvjerojatnije nicemu ne sluzi provjeriti!!!
         healthSlider.value -= _amount;
-        if(healthSlider.value <= 0)
+        PlaySound();
+        if (healthSlider.value <= 0)
         {
             Death();
+
+
         }
     }
 
@@ -76,6 +82,10 @@ public class PlayerHealth : MonoBehaviour {
             isDeath = true;
         }
 
+    }
+    private void PlaySound()
+    {
+        audioSource.PlayOneShot(hurtSound);
     }
 
 

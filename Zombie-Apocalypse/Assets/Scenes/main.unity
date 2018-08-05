@@ -802,42 +802,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114930997464951686, guid: 3570a5c1be5c2544299caebe7ca3414a,
-        type: 2}
-      propertyPath: weaponSlot
-      value: 
-      objectReference: {fileID: 967639581}
-    - target: {fileID: 114930997464951686, guid: 3570a5c1be5c2544299caebe7ca3414a,
-        type: 2}
-      propertyPath: pistoleSlot
-      value: 
-      objectReference: {fileID: 942589553}
-    - target: {fileID: 114556075477763854, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114140011779408876, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1609541243}
-    - target: {fileID: 114556075477763854, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114140011779408876, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 858281571}
-    - target: {fileID: 114521215245838734, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114200132157565082, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1609541243}
-    - target: {fileID: 114521215245838734, guid: 3570a5c1be5c2544299caebe7ca3414a,
-        type: 2}
-      propertyPath: ammoText
-      value: 
-      objectReference: {fileID: 858281571}
-    - target: {fileID: 114316669311273548, guid: 3570a5c1be5c2544299caebe7ca3414a,
-        type: 2}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 1609541243}
-    - target: {fileID: 114316669311273548, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114200132157565082, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: ammoText
       value: 
@@ -852,36 +832,46 @@ Prefab:
       propertyPath: hungerSlider
       value: 
       objectReference: {fileID: 463931700}
-    - target: {fileID: 114200132157565082, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114316669311273548, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1609541243}
-    - target: {fileID: 114200132157565082, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114316669311273548, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 858281571}
-    - target: {fileID: 114140011779408876, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114521215245838734, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1609541243}
-    - target: {fileID: 114140011779408876, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114521215245838734, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 858281571}
-    - target: {fileID: 82763841030247452, guid: 3570a5c1be5c2544299caebe7ca3414a,
+    - target: {fileID: 114556075477763854, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805599407602852, guid: 3570a5c1be5c2544299caebe7ca3414a,
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1609541243}
+    - target: {fileID: 114556075477763854, guid: 3570a5c1be5c2544299caebe7ca3414a,
         type: 2}
-      propertyPath: m_IsWalking
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 858281571}
+    - target: {fileID: 114930997464951686, guid: 3570a5c1be5c2544299caebe7ca3414a,
+        type: 2}
+      propertyPath: weaponSlot
+      value: 
+      objectReference: {fileID: 967639581}
+    - target: {fileID: 114930997464951686, guid: 3570a5c1be5c2544299caebe7ca3414a,
+        type: 2}
+      propertyPath: pistoleSlot
+      value: 
+      objectReference: {fileID: 942589553}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3570a5c1be5c2544299caebe7ca3414a, type: 2}
   m_IsPrefabParent: 0
@@ -2481,6 +2471,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1869141106}
     m_Modifications:
+    - target: {fileID: 114767203551495454, guid: 7ef17eae82dd97142b3d1c5ca29a9caa,
+        type: 2}
+      propertyPath: zombieSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4845766373982130, guid: 7ef17eae82dd97142b3d1c5ca29a9caa, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.7523
@@ -2523,6 +2518,26 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1538347176}
+    - target: {fileID: 195796560136091832, guid: 7ef17eae82dd97142b3d1c5ca29a9caa,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 114767203551495454, guid: 7ef17eae82dd97142b3d1c5ca29a9caa,
+        type: 2}
+      propertyPath: zombieSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b5283ed854e4b734a8888bc2ebe8edeb, type: 3}
+    - target: {fileID: 114767203551495454, guid: 7ef17eae82dd97142b3d1c5ca29a9caa,
+        type: 2}
+      propertyPath: zombieSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 63e11189a6ce4a441b5f06c47285c38d, type: 3}
+    - target: {fileID: 114767203551495454, guid: 7ef17eae82dd97142b3d1c5ca29a9caa,
+        type: 2}
+      propertyPath: zombieSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b9dcfdb353250ed4ea4681b744e2e303, type: 3}
     m_RemovedComponents:
     - {fileID: 114929891446832426, guid: 7ef17eae82dd97142b3d1c5ca29a9caa, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ef17eae82dd97142b3d1c5ca29a9caa, type: 2}
@@ -3844,6 +3859,21 @@ Prefab:
       propertyPath: useChangeRateValue
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114060118170286438, guid: 6e959c46e6e99344f8cc0d60d44bde02,
+        type: 2}
+      propertyPath: drinks
+      value: 
+      objectReference: {fileID: 8300000, guid: 93816c9c30c5e244ebabc28bbf9974cb, type: 3}
+    - target: {fileID: 114060118170286438, guid: 6e959c46e6e99344f8cc0d60d44bde02,
+        type: 2}
+      propertyPath: med
+      value: 
+      objectReference: {fileID: 8300000, guid: d7279b0cfcd99b043994c428fc18fd88, type: 3}
+    - target: {fileID: 114060118170286438, guid: 6e959c46e6e99344f8cc0d60d44bde02,
+        type: 2}
+      propertyPath: eat
+      value: 
+      objectReference: {fileID: 8300000, guid: 40ac344f9604ccf4983835eb485d1afd, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6e959c46e6e99344f8cc0d60d44bde02, type: 2}
@@ -5199,6 +5229,7 @@ GameObject:
   - component: {fileID: 1820912697}
   - component: {fileID: 1820912696}
   - component: {fileID: 1820912695}
+  - component: {fileID: 1820912699}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -5241,6 +5272,9 @@ MonoBehaviour:
   useSlider: {fileID: 434571706}
   useChangeRateValue: 0.5
   canDelete: 0
+  drinks: {fileID: 8300000, guid: 93816c9c30c5e244ebabc28bbf9974cb, type: 3}
+  eat: {fileID: 8300000, guid: 40ac344f9604ccf4983835eb485d1afd, type: 3}
+  med: {fileID: 8300000, guid: d7279b0cfcd99b043994c428fc18fd88, type: 3}
   timer: 0
 --- !u!114 &1820912697
 MonoBehaviour:
@@ -5272,6 +5306,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820912699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820912694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ccf8f4c8812f9449c947a79e7a0772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 515729251}
 --- !u!1 &1869141105
 GameObject:
   m_ObjectHideFlags: 0
